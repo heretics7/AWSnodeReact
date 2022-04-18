@@ -109,4 +109,4 @@ function InsertInterview(props){
 
 }
 
-export default InsertInterview
+export default InsertInterview;

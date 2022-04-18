@@ -86,20 +86,20 @@ class Classcomponent extends Component {
                          (content,i) =>
                          {
                              return (
-                                <Accordion.Item eventKey={i.toString()} key={ content.no } >
+                                <Accordion.Item eventKey={i.toString()} key={ content.wr_id } >
 
                                     <Accordion.Header>
                                    
                                         <strong className='row justify-content-between align-items-center w-100'>
-                                            <span className='col-sm-9 mb-0'> { content.subject }</span>
+                                            <span className='col-sm-9 mb-0'> { content.wr_a }</span>
                                             <span className='btn interviewBtn col-sm-3  mb-0'>
-                                                <Link to={'/interviewModify/'+ content.no } className='modify btn btn-primary mx-1 '>M</Link> 
-                                                <a href="#" onClick={ e=>{ this.state.deleteDB(content.no) }}  className='delete btn btn-primary mx-1'>D</a>
+                                                <Link to={'/interviewModify/'+ content.wr_id } className='modify btn btn-primary mx-1 '>M</Link> 
+                                                <a href="#" onClick={ e=>{ this.state.deleteDB(content.wr_id) }}  className='delete btn btn-primary mx-1'>D</a>
                                             </span>                                            
                                         </strong>
                                     </Accordion.Header>
                                     <Accordion.Body>
-                                            { content.content }
+                                            { content.wr_q }
                                     </Accordion.Body>
                                 </Accordion.Item>
                              )

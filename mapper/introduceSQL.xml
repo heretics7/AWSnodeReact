@@ -4,25 +4,25 @@
     <select id="interviewList">
         select 
             *
-        from bby_preinterview.conent_interview
-        order by no desc
+        from reactinterview.interview
+        order by wr_id desc
     </select>
     <insert id="interviewInsert">
         insert into 
-            bby_preinterview.conent_interview (
-                subject                
-                , content 
+            reactinterview.interview (
+                wr_a              
+                , wr_q
             )
             values (
-                 #{wr_subject}
+                #{wr_subject}
                 ,  #{wr_content}
             )
     </insert> 
     <delete id="interviewDelete">
         delete from
-            bby_preinterview.conent_interview 
+            reactinterview.interview
         where 
-            no = #{no}
+            wr_id = #{no}
     </delete> 
    
 </mapper>
